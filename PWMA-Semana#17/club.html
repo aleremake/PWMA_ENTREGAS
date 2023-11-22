@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="website icon" type="png" href="FPF2.png">
+    <title>Clubes</title>
+  </head>
+  <body>
+    <header>
+    <center>
+      <a href="FPF.html"><img src="FPF2.png" alt="menu" height="100" /></a>
+      <h1>Times Da Federação Paulista De Futebol</h1>
+    </center>
+    </header>
+    
+    <ul id="lista-times"></ul>
+    
+    
+    <style>
+      h1 {
+        text-align: center;
+        font-size: 24px;
+        margin-top: 20px;
+      }
+
+    
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      li {
+        background-color: #e7e1e1;
+        border: 5px solid #f9f7f7;
+        padding: 10px;
+        margin: 10px;
+        border-radius: 5px;
+        box-shadow: 0 0 5px hwb(0 4% 96%);
+      }
+
+      li:hover {
+        background-color: #cd0e0e;
+        cursor: pointer;
+      }
+
+      a {
+        text-decoration: none;
+        color: #f2f2f2;
+        font-weight: bold;
+      }
+
+      a:hover {
+        color: #0e0303;
+      }
+    
+      header {
+    width: 96%;
+    background-color: #b0011b;
+    padding: 25px;
+    text-align: center;
+}
+
+header h1 {
+    color: antiquewhite;
+}
+    
+    </style>
+  </body>
+  <script>
+    const database = [
+      { id: 1, nome: "São paulo", Presidente: "Júlio Cesar Casares", Estadio: "Morumbi" },
+      { id: 2, nome: "Santos", Presidente: "Andrés Enrique Rueda Garcia", Estadio: "Vila Belmiro" },
+      { id: 3, nome: "Corinthians", Presidente: "Duílio Noccioli Monteiro Alves", Estadio: "Neo Quimica Arena" },
+      { id: 4, nome: "Palmeiras", Presidente: "Leila Mejdalani Pereira", Estadio: "Allianz Parque" },
+      
+    ];
+
+    function exibirTimes() {
+      const listaTimes = document.getElementById("lista-times");
+
+      listaTimes.innerHTML = "";
+
+      for (const time of database) {
+        const itemLista = document.createElement("li");
+        itemLista.textContent = `Nome: ${time.nome}, Presidente: ${time.Presidente}, Estadio: ${time.Estadio}`;
+        listaTimes.appendChild(itemLista);
+      }
+    }
+
+    window.addEventListener("load", exibirTimes);
+  </script>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Super Highlights</title>
+    <link rel="icon" type="image/png" href="FPF2.png">
+   
+ 
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('tema.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            font-family: "Helvetica", Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .video-container {
+            width: 80%;
+            max-width: 800px;
+            background: rgba(0, 0, 0, 0.7);
+            border: 2px solid black;
+            border-radius: 10px;
+            padding: 5px;
+            text-align: center;
+        }
+
+        .video-frame {
+            width: 100%;
+            height: 400px;
+        }
+
+        button {
+            background-color: red;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+            font-family: "Helvetica", Arial, sans-serif;
+        }
+
+        button:hover {
+            background-color: black;
+        }
+
+        @media (max-width: 768px) {
+            .video-container {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="video-container">
+        <iframe class="video-frame" id="video1" src="https://www.youtube.com/embed/cHa8l9dhleU?si=MeHTZdtoHpa59vLm" title="Video 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <br>
+        <button onclick="changeVideo('https://www.youtube.com/embed/Wp3vCFOcGQY?si=CL6CYqXQpN0XHJX7')">Top 1</button>
+        <button onclick="changeVideo('https://www.youtube.com/embed/dFfM8ulgNiY?si=VMQFQveK2R07i2gq')">Top 2</button>
+        <button onclick="changeVideo('https://www.youtube.com/embed/9RXdgHDfe34?si=tPamIC-x4Yq5AKe6')">Top 3</button>
+    </div>
+
+    <script>
+        function changeVideo(videoSrc) {
+            var videoFrame = document.getElementById('video1');
+            videoFrame.src = videoSrc;
+        }
+    </script>
+</body>
+</html>

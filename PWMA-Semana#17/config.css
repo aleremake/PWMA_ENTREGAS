@@ -1,0 +1,165 @@
+* {
+    margin: auto;
+}
+
+header {
+    width: 95.4%;
+    background-color: #b0011b;
+    padding: 36px;
+    text-align: center;
+    align-items: center;
+}
+
+header h1 {
+    color: antiquewhite;
+}
+
+nav {
+    background-color: #000000;
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    color: antiquewhite;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #f54d4d;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0px;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+
+footer {
+    background-color: #100202;
+}
+
+footer, nav {
+    width: 98.9%;
+    padding: 10px;
+}
+
+footer p {
+    color: antiquewhite;
+    font-family: "Arial", sans-serif;
+    text-align: center;
+}
+
+div.botoes {
+    padding: 20px 60px;
+    background-color: #000;
+    border: none;
+    font-size: 18px;
+    position: relative;
+    transition: 500ms;
+}
+
+div.botoes span {
+    color: rgb(255, 255, 255);
+    position: relative;
+    transition: 500ms;
+    transition-delay: 500ms;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+div.botoes:before {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 0%;
+    left: 50%;
+    right: 50%;
+    top: 50%;
+    bottom: 50%;
+    transition: 500ms;
+    transition-delay: 500ms;
+    background-color: red;
+    box-shadow: 0 0 10px red,
+        0 0 30px red,
+        0 0 50px red;
+}
+
+div.botoes div {
+    transition: 500ms;
+    position: absolute;
+    background-color: red;
+    box-shadow: 0 0 15px red, 0 0 30px red, 0 0 50px red;
+}
+
+div.botoes .top {
+    width: 15px;
+    height: 2px;
+    top: 0;
+    left: 0;
+}
+
+div.botoes .bottom {
+    width: 15px;
+    height: 2px;
+    bottom: 0;
+    right: 0;
+}
+
+div.botoes .left {
+    width: 2px;
+    height: 15px;
+    top: 0;
+    left: 0;
+}
+
+div.botoes .right {
+    width: 2px;
+    height: 15px;
+    bottom: 0;
+    right: 0;
+}
+
+div.botoes:hover {
+    color: #000;
+}
+
+div.botoes:hover span {
+    color: #000;
+}
+
+div.botoes:hover:before {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+div.botoes:hover .top,
+div.botoes:hover .bottom {
+    width: 100%;
+}
+
+div.botoes:hover .left,
+div.botoes:hover .right {
+    height: 100%;
+}
+
+@media screen and  (max-width: 620px)  {
+    nav {
+        background-color: rgb(16, 15, 15);
+    }
+    
+    
+}
+
